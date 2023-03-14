@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上传成功</title>
+ <style>
+h1 {text-align:center}
+</style>
+</head>
+<body>
+    <br><br>
+    <h1>上传成功！</h1>
+    <form action="" enctype='multipart/form-data' method='POST'>
+        <input type="file" name="file" style="margin:20px 0px 20px 630px;"/>
+        <input type="submit" value="上传" class="button-new" style="margin-left:-50px;"/>
+    </form>
+
+    <p style="margin:0px 0px 0px 210px;">
+        <img src="data:;base64,{{ origin }}" width="500" height="375" alt="失败了～" style="margin-top:15px;"/>
+        <img src="data:;base64,{{ detect_img }}" width="500" height="375" alt="失败了～" style="margin-left:80px;"/>
+    </p>
+
+
+    <table width="1000" cellspacing="10">
+        <tr align="center">
+            <th>检测类别</th>
+            <th>检测大小</th>
+            <th>置信度</th>
+        </tr>
+        {% for key, value in img_info.items() %}
+        <tr>
+            <th>{{key}}</th>
+            <th>{{ value[0] }}</th>
+            <th>{{ value[1] }}</th>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>

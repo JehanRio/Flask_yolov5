@@ -1,0 +1,7 @@
+train: E:/ComputerScience/DeepLearning/yolov5/data/my_yolo_dataset/train/
+val: E:/ComputerScience/DeepLearning/yolov5/data/my_yolo_dataset/val/
+
+# Classes
+nc: 20
+names: ['aeroplane', 'bicycle', 'bird', 'boat', 'bottle', 'bus', 'car', 'cat', 'chair', 'cow', 'diningtable', 'dog',
+        'horse', 'motorbike', 'person', 'pottedplant', 'sheep', 'sofa', 'train', 'tvmonitor']  # class names

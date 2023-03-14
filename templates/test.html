@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上传成功</title>
+<link rel="stylesheet" href="../static/test.css">
+</head>
+<body>
+    <br><br>
+    <!-- 文字 -->
+    <h1>上传成功！</h1>
+
+    <!-- 上传图片 -->
+    <form action="" enctype='multipart/form-data' method='POST'>
+        <div class="plus">
+             <img src="../static/plus.png" >
+             <input type="file" name="file" class="plus1"/>
+        </div> 
+        <div class="upload">
+          <img src="../static/2.png" >
+         <input type="submit" value="上传" class="plus2" />
+        </div>
+         
+     </form>
+
+        <div class="img1">
+            <div class="img2">
+                 <img src="data:;base64,{{ origin }}" width="500" height="375" alt="失败了～" />
+            </div>
+            <div class="img3">
+                <img src="data:;base64,{{ detect_img }}" width="500" height="375" alt="失败了～" />
+            </div>
+        </div>
+
+    <table border="1px" align="center" width="1000" cellspacing="10">
+        <tr align="center">
+            <th>检测类别</th>
+            <th>检测大小</th>
+            <th>置信度</th>
+        </tr>
+        {% for key, value in img_info.items() %}
+        <tr>
+            <th>{{key}}</th>
+            <th>{{ value[0] }}</th>
+            <th>{{ value[1] }}</th>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>

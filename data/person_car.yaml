@@ -1,0 +1,8 @@
+train: E:\ComputerScience\DeepLearning\yolov5\data\person_car\train
+val: E:\ComputerScience\DeepLearning\yolov5\data\person_car\val
+
+# Classes
+nc: 22
+names: ['Car', 'LightTruck', 'LargeBus', 'van', 'Truck', 'Pedestrian', 'TricycleClosed', 'Pickup', 'Motorcycle',
+ 'HeavyTruck', 'MotorCyclist', 'EngineTruck', 'Machineshop', 'BiCyclist', 'TricycleOpenMotor', 'Bike',
+ 'TricycleOpenHuman', 'OtherCar', 'MediumBus', 'PersonSitting', 'CampusBus', 'MMcar'] # class names

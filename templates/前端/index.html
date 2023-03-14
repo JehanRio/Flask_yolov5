@@ -1,0 +1,38 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>YOLOV5在线检测</title>-->
+<!--</head>-->
+
+<!--<body>-->
+<!--&lt;!&ndash;文本对齐方式&ndash;&gt;-->
+<!--<div style="text-align: left;margin-left: 500px;">-->
+<!--    <form action="" enctype='multipart/form-data' method='POST'>-->
+<!--    <p><input type="file"  name="file" accept=".jpg, .jpeg, .png" ></p>-->
+<!--    <p><input type="submit" value="点击提交"></p>-->
+<!--    </form>-->
+<!--</div>-->
+
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+    <body>
+        <div>
+             <img style="width:180px" src="data:;base64,{{ img_stream }}">
+<!--                当用户单击确认按钮时，表单的内容会被传送到另一个文件-->
+            <form method="post" action="http://localhost:5000/up_photo" enctype="multipart/form-data">
+            <input type="file" size="30" name="photo"/>
+            <br>
+            <input type="text" class="txt_input" name="name" style="margin-top:15px;"/>
+            <input type="submit" value="提交信息" class="button-new" style="margin-top:15px;"/>
+            </form>
+        </div>
+    </body>
+</html>
