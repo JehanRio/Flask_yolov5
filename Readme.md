@@ -1,7 +1,3 @@
----
-typora-root-url: imgs
----
-
 # 深度学习
 
 ### 数据集划分
